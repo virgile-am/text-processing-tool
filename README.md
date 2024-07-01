@@ -1,49 +1,62 @@
-# Library Management System
 
-## Overview
+### Text Processing and Data Management Tool
+Overview
+The Text Processing and Data Management Tool is a JavaFX-based application that provides powerful features for text processing using regular expressions and managing data collections. The tool allows users to perform search, match, and replace operations on text data and manipulate collections of data using Java collections (List, Set, Map).
 
-The **Library Management System** is a comprehensive solution for managing library resources and operations. It integrates Object-Oriented Programming (OOP), data structures, a normalized database schema, and JavaFX for a user-friendly interface.
-
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
- 
-## Features
-
-- **Books Management**: Add, remove, and update book details.
-- **User  Management**: Register, update, and remove patrons.
-- **Transaction Management**: Manage lending, returning, and reserving books.
-- **User Interface**: Developed with JavaFX for intuitive interactions.
-
-## Installation
-
-### Prerequisites
-
-- Java Development Kit (JDK) 21
--  PostgreSQL for the database
-
-
-### Setup
-
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/virgile-am/LibraryManagementSystem
-    cd Library-Management-System
-    ```
-
-2. **Configure the database**:
-    - Set up your database according to the schema provided in `docs/ERD.jpeg`.
-    - Update database credentials in `src/main/java/com/library/config/DatabaseConfig.java`.
-
+# Table of Contents
+# Features
+# Usage
  
 
- 
-## Usage
 
-1. Launch the application.
-2. Use the GUI to manage books, User Management
+# Features 
+**Regex Operations**
+Search for patterns in text.
+Replace matched patterns with specified text.
+Highlight matches within the text.
+Supports sets, ranges, alternations, shorthands, and quantifiers.
 
+##USAGE
 
-## Project Structure
+### Usage  Regex Operations
 
+**Enter Text:** In the Text Input area, input the text you want to process.
+**Specify Regex Pattern:** Enter the regex pattern in the Regex Pattern field.
+**Replace Text:** (Optional) Enter the replacement text in the Replace With field.
+**Find Matches**: Click the Find Matches button to search for the pattern. The matches will be displayed in the Results area.
+**Replace Text:** Click the Replace button to replace matches with the specified text. The result will appear in the Results area.
+**Highlight Matches:** Click the Highlight Matches button to highlight occurrences of the regex pattern in the text.
+### Data Collections
+**Select Collection Type:** Choose between List, Set, or Map using the Collection Type dropdown.
+**Select Current Collection:** Choose the active collection from the Current Collection dropdown.
+**Add Items:** Enter the item in the Item field and click Add to Collection.
+**Update Items:** Select an item from the list view, enter the new value in the Item field, and click Update Selected.
+**Delete Items:** Select an item from the list view and click Delete Item to remove it from the collection.
+**Clear Collection:** Click Clear Collection to remove all items from the active collection.
+### Testing
+Example Tests
+Replace Example
+
+Enter Text: The quick brown fox jumps over the lazy dog.
+Regex Pattern: fox
+Replace With: cat
+Click Replace: Result should be The quick brown cat jumps over the lazy dog.
+Highlight Example
+
+Enter Text: The quick brown fox jumps over the lazy dog.
+Regex Pattern: \b\w{3}\b
+Click Highlight Matches: Result should be [The] quick brown [fox] jumps over [the] lazy dog.
+### Data Collection Example
+Select List from the Collection Type.
+**Add Items:**
+Enter apple and click Add to Collection.
+Enter banana and click Add to Collection.
+**Update Items:**
+Select apple, enter pear, and click Update Selected.
+apple should be replaced with pear in the list.
+**Delete Items:**
+Select banana and click Delete Item.
+banana should be removed from the list.
+**Clear Collection:**
+Click Clear Collection.
+All items should be removed from the list.
