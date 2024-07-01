@@ -1,3 +1,4 @@
+![MAIN IMAGE](https://github.com/virgile-am/text-processing-tool/assets/172407316/0b02d9b1-b77b-4eb8-a846-2c01b48c3acf)
 
 ### Text Processing and Data Management Tool
 Overview
